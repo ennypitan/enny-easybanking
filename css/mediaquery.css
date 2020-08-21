@@ -1,6 +1,6 @@
 /********* Media Queries********/
 
-@media screen and (max-width: 480px) and (min-width: 320px)	{
+@media screen and (max-width: 414px) /**If [device width] is less than or equal to 414pxpx, then do**/	{
     .primary-btn{display: none;
     }
     .header{
@@ -141,7 +141,7 @@
       flex-direction: column;
      }
   }
-  @media screen and (max-width: 1024px) and (min-width: 481px) 	{
+  @media screen and (max-width: 768px) /**If [device width] is less than or equal to 768px, then do**/ 	{
   
   .primary-btn{display: none;
     }
