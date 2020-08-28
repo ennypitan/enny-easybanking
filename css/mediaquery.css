@@ -3,8 +3,15 @@
 @media screen and (max-width: 414px) /**If [device width] is less than or equal to 414pxpx, then do**/	{
     .primary-btn{display: none;
     }
+    .bg-intro-desktop{
+      display: none;
+    }
+    .top-mobile-container{
+      display: block;
+    }
     .header{
-      position: fixed;
+      position: relative;
+      padding: 0 2em;
     }
     .text-btn, .footer-btn{
       display: flex;
@@ -14,6 +21,56 @@
   .nav-bar{
       display: none;
     }
+
+/*************Top Mobile Container**********/
+
+.top-mobile-container{
+  width: 100%;
+}
+.top-mobile-row{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+}
+.top-mobile-card{
+flex:1 0 80%;
+}
+.top-mobile-card-content{
+  padding: 0 2em;
+}
+.mobile-image{
+  width: 30em;
+  height: 30em;
+  background-image: url("../images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.next-gen{
+  font-size: 3em;
+  line-height: 1.3em;
+}
+.next-gen-text{
+  margin-top: 0em;
+  font-size: 18px;
+  padding-right: 0em;
+  color: hsl(233, 8%, 62%);
+ 
+}
+.phone-image img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
     /***************Responsive Menu**************/
   .menu_icon {
       display: block;
@@ -72,11 +129,15 @@
       font-size: 18px;
       color: #303030;
   }
-      
+  
   .menu_icon .mid    {
       top: .6em;
       width: 1.5em;
+      left: -1em;
   }
+  .menu_icon:hover .mid	{
+    left: 0;
+}
       
   .menu_icon .btm    {
       top: 1.2em;
@@ -95,53 +156,13 @@
       top: 1em;
   }
   /***************End of Responsive Menu**************/
-  .bg-intro-desktop{
-    position:  relative;
-    background-image: url("../images/bg-intro-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100% 0%;
   
-      
-  }
-  .phone-images{
-    width: 95%;
-    height: 60em;
-    background-size: contain;
-    background-position: top;
-  }  
-  .top-card{
-    position: relative;
-    flex:1 0 100%;  
-  }
-  .first{
-      margin-top: 15em;
-      padding-right: 0em;
-      padding: 2em;
-      text-align: center;
-      order: 2;
-    }
-  .second{
-     order: 1;
-    }
-    .next-gen{
-      
-      font-size: 2em; 
-    }
-    .next-gen-text{
-      padding-right: 0;
-      text-align: justify;
-    }
-  
-    .card-content{
-      margin: 0em 0em;
-      padding: 0em 2em;
-    }
+
     
      /********Second Section Container********/
 .second-section-container{
   padding: 2em 2em;
-  margin-top: 25em;
+  margin-top: 5em;
 }
 .second-section-title{
   font-size: 2em;
@@ -151,20 +172,28 @@
   opacity: 0.5;
 }
 .second-section-row{
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .second-section-card{
-  flex:1 0 100%;
+  flex:1 0 80%;
 }
 .second-section-card-content{
   padding: 1em 0;
 }
 .card-title{
   padding: .5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card-text{
   opacity: 0.5;
+}
+.card-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /******Latest Articles Section********/
 .latest-article-container{
@@ -177,11 +206,18 @@
   flex:1 0 80%;
 }
 /***************Footer Section**************/
-.footer-card{
-  flex:1 0 80%;
+.footer-container{
+  padding: 4em;
 }
-  }
-  @media screen and (max-width: 768px) /**If [device width] is less than or equal to 768px, then do**/ 	{
+.footer-card{
+  flex:1 0 100%;
+}
+.card-content{
+  margin: 0em 0em;
+  padding: 0em 2em;
+}
+}
+ @media screen and (min-width:415px) and (max-width: 768px) /**If [device width] is less than or equal to 768px, then do**/ 	{
   
   .primary-btn{display: none;
     }
@@ -253,9 +289,13 @@
   }
       
   .menu_icon .mid    {
-      top: .6em;
-      width: 1.5em;
-  }
+    top: .6em;
+    width: 1.5em;
+    left: -1em;
+}
+.menu_icon:hover .mid	{
+  left: 0;
+}
       
   .menu_icon .btm    {
       top: 1.2em;
@@ -315,7 +355,55 @@
       
       color: hsl(233, 8%, 62%);
     }
-    
+    /********Second Section Container********/
+.second-section-container{
+  padding: 2em 5em;
+  margin-top: 15em;
+}
+.second-section-title{
+  font-size: 2em;
+  font-weight: normal;
+}
+.second-section-text{
+  opacity: 0.5;
+}
+.second-section-row{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.second-section-card{
+  flex:1 0 50%;
+}
+.second-section-card-content{
+  padding: 1em 0;
+}
+.card-title{
+  padding: .5em 0;
+}
+.card-text{
+  opacity: 0.5;
+}
+/******Latest Articles Section********/
+.latest-article-container{
+  padding: 2em 5em;
+}
+.latest-article-title{
+  font-size: 2em;
+}
+.latest-article-card{
+  flex:1 0 80%;
+}
+/***************Footer Section**************/
+.footer-container{
+  padding: 1em;
+}
+.footer-card{
+  flex:1 0 100%;
+}
+.card-content{
+  margin: 0em 0em;
+  padding: 2em 0em;
+}
   }
   
   
