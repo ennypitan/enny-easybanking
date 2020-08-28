@@ -41,12 +41,13 @@ flex:1 0 80%;
   padding: 0 2em;
 }
 .mobile-image{
-  width: 30em;
+  width: 25em;
   height: 30em;
   background-image: url("../images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  overflow-x: hidden;
 }
 .next-gen{
   font-size: 3em;
@@ -68,7 +69,7 @@ flex:1 0 80%;
   top: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
-  max-width:80%;
+  max-width:100%;
   height:auto;
 }
     /***************Responsive Menu**************/
